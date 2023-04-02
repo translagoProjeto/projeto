@@ -1,0 +1,102 @@
+
+
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+           
+
+            {{#if erro.msg}} 
+            <p style="color: red;">Ocorreu um erro ao salvar, tente novamente</p>
+            {{/if}}
+           
+
+            
+
+            <h2 class="apresentacao_conteudo_titulo">Requisitos</h2>
+                <ul class="apresentacao_conteudo_paragrafo" style="list-style-type:disc">
+                    <li>Exame admissional</li>
+                    <li>Exame toxicológico</li>
+                    <li>Carteira D</li>
+                    
+                </ul>
+            <h3 class="apresentacao_conteudo_titulo">Salário</h3>
+                <ul class="apresentacao_conteudo_paragrafo" style="list-style-type:disc">
+                    <p>Motorista:</p>
+                    <li class="form__salario__mes">R$ 2.390 <strong class="form__salario">por mês</strong></li>
+                </ul>
+        </section>
+        <img src="/img/onibus.jpg" alt="Ônibus" class="onibus">
+    </main>
+    <div class="box">
+        <form method="post" id="form" action="/formulario" >
+            <br>
+            <div>
+                <legend class="formulario__titulo"><b>Fórmulário</b></legend>
+                <br>
+
+                <div class="inputBox">
+
+                    <div id="test"></div>
+                    
+                    <label for="nome" class="labelInput">Nome completo</label><br><br>
+                    <input type="text" name="nome" id="nome" class="inputUser" placeholder="Escreva aqui" required>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+
+                    <label for="email" class="labelInput">Email</label><br><br>
+                    <input type="text" name="email" id="email" class="inputUser" placeholder="Escreva aqui" required>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+
+                    <label for="telefone" class="labelInput">Telefone</label><br><br>
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" placeholder="(xx) xxxxx-xxxx" required>
+                </div><br><br>
+
+                
+
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" placeholder="Escreva aqui" required>
+                <br><br><br>
+
+                <div class="inputBox">
+                    
+                    <label for="cidade" class="labelInput">Cidade</label><br><br>
+                    <input type="text" name="cidade" id="cidade" class="inputUser" placeholder="Escreva aqui" required>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+
+                    <label for="estado" class="labelInput">Estado</label><br><br>
+                    <input type="text" name="estado" id="estado" class="inputUser" placeholder="Escreva aqui" required>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+
+                    <label for="endereco" class="labelInput">Endereço</label><br><br>
+                    <input type="text" name="endereco" id="endereco" class="inputUser" placeholder="Escreva aqui" required>
+                </div>
+                <br><br>
+                <p>Sexo:</p>
+
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label><br><br>
+                
+
+                <input type="submit" id="submit" class="enviar">
+            </div><br>
+
+        </form>
+ </div>

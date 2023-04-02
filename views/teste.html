@@ -1,0 +1,41 @@
+<style>
+    table, th, td {
+      border: 1px solid;
+    }
+    
+    table {
+      width: 100%;
+    }
+    </style>
+
+<h3>Página Teste</h3>
+<br>
+<div >
+    <div>
+        <table border="1">
+            <tr>
+                <th>Nome</hd>
+                <th>Endereco</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Data Nasc</th>
+            </tr>
+
+            {{#each usuarios}}
+            <tr>
+                <td>{{this.nome}}</td>
+                <td>{{this.endereco}}</td>
+                <td>{{this.telefone}}</td>
+                <td>this.email</td>
+                <td>{{this.data_nascimento}}</td>
+                 
+            </tr>
+            {{/each}}
+
+        </table>
+
+       
+
+    </div>
+</div>
+

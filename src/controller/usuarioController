@@ -1,0 +1,45 @@
+const conexao = require('../utils/conexao');
+
+
+//FUNCAO QUE FAZ O SERVIO DE GRAVAR NO BANCO
+const addUsuario = async (cadastro) => {
+    const conn = await conexao();
+    const addUser = await conn.execute("INSERT INTO usuarios (nome, email, telefone, data_nascimento, cidade, estado, endereco, genero) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )",
+        [cadastro.nome, cadastro.email, cadastro.telefone, cadastro.data_nascimento, cadastro.cidade, cadastro.estado, cadastro.endereco, cadastro.genero])
+
+    return true
+}
+
+const getAllUsuarios = async (req, res) => {
+
+    const retorno = await retunAllUsers();
+
+    if (retorno != null) {
+        res.render('teste', {
+            usuarios: retorno
+        });
+    }else{
+        res.render('teste',{
+            retorno: {msg:"Ocorreu um erro"}
+        })
+    }
+}
+
+
+const retunAllUsers = async () => {
+    try {
+       const conn = await conexao();
+       const [results] = await conn.query("SELECT * FROM  usuarios") ;
+       if(results){
+        return results
+       }
+
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+
+}
+
+
+module.exports = { addUsuario, getAllUsuarios }

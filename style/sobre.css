@@ -1,0 +1,41 @@
+
+/*Texto Mensagem*/
+.mensagem-box {
+    padding-top: 10px ;
+    width: 100px;
+    text-align: center;
+}
+
+
+#input-text {
+    width: 500px;
+    height: 75px;
+    text-align:start;
+    text-justify: auto;
+    margin-bottom: 75px;
+    border: 2px solid #22D4FD;
+    border-radius: 10px;
+}
+
+
+
+.caixa__formulario{
+    margin: 30px;
+    justify-content: space-between;
+    display: flex;
+    padding: 8px;
+    margin-bottom: 0px;
+    font-family: var(--font-textos);
+}
+
+.caixinha{
+    text-align: center;
+    align-items: center;
+    margin-top: 0px;
+    height: 30px;
+    margin: 30px;
+    align-items: stretch;
+}
+
+
+

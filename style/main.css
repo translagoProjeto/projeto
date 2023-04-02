@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #F6F1F1;
+    --cor-secundaria: #19A7CE;
+    --cor-terciaria: #146C94;
+    --cor-hover: #000000;
+
+    --font-principal: "Montserrat", sans-serif;
+    --font-textos: 'Krona One', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 10px;
+}
+
+body{
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.cabecalho{
+    padding: 2% 0 0 10%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho_menu_link{
+    font-family: var(--font-principal);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+
+
+.apresentacao{
+    padding: 8% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: var(--font-textos);
+}
+
+
+
+.apresentacao_conteudo_titulo{
+    font-size: 36px;
+    font-family: var(--font-textos);
+}
+
+.apresentacao__conteudo__sugestoes{
+    font-size: 36px;
+    font-family: var(--font-principal);
+}
+
+.apresentacao_conteudo_paragrafo{
+    font-size: 24px;
+    font-family: var(--font-principal);
+
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao_links_subtitulo{
+    font-family: var(--font-textos);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.redes__sociais{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__butao{
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: var(--font-principal);
+    padding: 16px 0;
+    margin: 0;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--cor-terciaria);
+}
+
+.apresentacao__butao:hover{
+    background-color: var(--cor-hover);
+    padding: 3%;
+}
+
+
+
+.rodape{
+    margin-top: 0px;
+    text-align: center;
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    font-family: var(--font-principal);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+.onibus{
+    width: 150%;
+    height: 500%;
+    top: 100%;
+    left: 556%;
+}

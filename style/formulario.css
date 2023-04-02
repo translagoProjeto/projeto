@@ -1,0 +1,31 @@
+
+.formulario__titulo{
+    font-family: var(--font-principal);
+    font-size: 36px;
+    margin-left: 30px;
+}
+
+.form__salario{
+    color: var(--cor-terciaria);
+}
+
+.inputBox{
+    font-family: var(--font-textos);
+    font-size: 20px;
+}
+.inputUser {
+    text-align: start;
+}
+
+.enviar{
+    width: 150px;
+    padding: 8px;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 500px;
+
+}
+
+
+
