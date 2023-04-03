@@ -1,17 +1,25 @@
 <style>
-    table, th, td {
-      border: 1px solid;
+    table,
+    th,
+    td {
+        border: 1px solid;
     }
-    
+
     table {
-      width: 100%;
+        width: 100%;
     }
-    </style>
+</style>
 
 <h3>Página Teste</h3>
 <br>
-<div >
+<div>
+    <p>{{loud retorno.msg}}</p>
     <div>
+        {{#if}}
+          <p>{{retorno.msg}}</p>
+        {{else}}
+        <div>Não tem retorno</div>
+        {{/if}}
         <table border="1">
             <tr>
                 <th>Nome</hd>
@@ -28,14 +36,13 @@
                 <td>{{this.telefone}}</td>
                 <td>this.email</td>
                 <td>{{this.data_nascimento}}</td>
-                 
+
             </tr>
             {{/each}}
 
         </table>
 
-       
+
 
     </div>
 </div>
-

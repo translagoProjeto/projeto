@@ -37,9 +37,17 @@ router.get("/sobre", (req, res) => {
 })
 
 
- router.get('/teste', getAllUsuarios )
+ router.get('/teste',(req,res)=>{
+    res.render('teste', {
+        retorno:{msg:"ola isto e uma messagem"}
+     } 
+    )
+ }
+ 
+  
+ )
 
-
+ //getAllUsuarios
 
 
 
