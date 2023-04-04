@@ -1,3 +1,22 @@
+var diasDaSemana = {
+  0: "Domingo",
+  1: "Segunda-Feira",
+  2: "Terça-Feira",
+  3: "Quarta-Feira",
+  4: "Quinta-Feira",
+  5: "Sexta-Feira",
+  6: "Sábado"
+};
+
+var horariosDaSemana = {
+  "Domingo": ["05:50", "08:10", "10:30", "12:20", "14:30", "16:30", "18:30"],
+  "Segunda-Feira": ["05:50", "07:10", "07:50", "09:50", "11:50", "13:50", "15:50", "17:50", "18:50", "21:50"],
+  "Terça-Feira": ["05:50", "07:10", "07:50", "09:50", "11:50", "13:50", "15:50", "17:50", "18:50", "21:50"],
+  "Quarta-Feira": ["05:50", "07:10", "07:50", "09:50", "11:50", "13:50", "15:50", "17:50", "18:50", "21:50"],
+  "Quinta-Feira": ["05:50", "07:10", "07:50", "09:50", "11:50", "13:50", "15:50", "17:50", "18:50", "21:50"],
+  "Sexta-Feira": ["05:50", "07:10", "07:50", "09:50", "11:50", "13:50", "15:50", "17:50", "18:50", "21:50"],
+  "Sabado": ["05:50", "08:10", "10:30", "12:20", "14:30", "16:30", "18:30", "21:40"]
+};
 
 //ANIMAÇÃO
 function toggleDiv() {
@@ -11,23 +30,41 @@ function toggleDiv() {
   }
   
 //DIA 
+
 var data = new Date();
 var dia = data.getDate();
 var mes = data.getMonth() + 1;
 var ano = data.getFullYear();
 
 function diaCompleto() {
-    if(dia < 10){
-        return "0"
-    }
+  if(dia < 10){
+    return "0"
+  }
 }
 
 function mesCompleto(){
-    if(mes < 10){
-        return "0"
-    }
+  if(mes < 10){
+    return "0"
+  }
 }
 
 var dataAtual = document.getElementById("dataAtual");
-dataAtual.innerHTML = "Data atual: " + diaCompleto() + dia + "/" + mesCompleto() + mes + "/" + ano;
+dataAtual.innerHTML = "Data atual: " + diaCompleto() + dia + "/" + mesCompleto() + mes + "/" + ano + " - " + diasDaSemana[data.getDay()];
 
+//Mudar o horario de acordo com os dias da semana 
+
+
+var diaDaSemana = data.getDay();
+
+var horarios = document.getElementById("horarios");
+switch (diaDaSemana) {
+  case 0: // Domingo
+    horarios = document.getElementById("horarios").innerHTML = "<li>5:50</li><li>08:10</li><li>10:30</li><li>12:20</li><li>14:30</li><li>16:30</li><li>18:30</li>";
+    break;
+  case 6: // Sábado
+    horarios.innerHTML = "<li>10:30</li><li>13:00</li><li>15:00</li><li>17:00</li>";
+    break;
+  default: // Demais dias da semana
+    horarios.innerHTML = "<li>05:30</li><li>07:10</li><li>07:50</li><li>09:50</li><li>11:50</li><li>13:50</li><li>15:50</li><li>17:50</li><li>18:50</li><li>21:30</li>";
+    break;
+}
