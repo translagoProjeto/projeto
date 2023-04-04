@@ -23,13 +23,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(bodyParser.json())
 
-//
+//ROTAS PARA PEGAR OUTRAS ROTAS
 app.use(routes)
 
 
 app.use('/style', express.static(__dirname + '/style'))
+app.use('/scripts', express.static(__dirname + '/scripts'))
 app.use('/img', express.static(__dirname + '/img'))
 
+//HANDLEBARS
 
 Handlebars.registerHelper('loud', function (aString) {
     return aString.toUpperCase()
