@@ -1,3 +1,7 @@
 .cidades__topicos{
     padding: 30%;
 }
+
+.seta:hover {
+    cursor: pointer;
+}
