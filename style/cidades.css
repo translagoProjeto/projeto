@@ -5,6 +5,19 @@
 .seta:hover {
     cursor: pointer;
 }
+/*//TAG <P>--ANIMAÇÃO//*/
+#minhaDiv {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  #minhaDiv.mostrar {
+    opacity: 1;
+  }
+  
+  #minhaDiv.esconder {
+    opacity: 0;
+  }
 
 /*//CONTAINER//*/
 .container {
@@ -13,7 +26,7 @@
     padding: 20px;
     height: 150;
     border-radius: 10px;
-    background-color: #eeeded;
+    background-color: #ecebeb;
   }
   
   
@@ -30,4 +43,17 @@
     margin-bottom: 10px;
     text-align: center;
   }
-  
+
+  .container .box h3 {
+    text-align: center;
+  }
+
+  /*//CONTEUDO//*/
+
+  #dataAtual {
+    color: var(--cor-terciaria)
+  }
+
+  .container .box h3 {
+    color: var(--cor-terciaria)
+  }
