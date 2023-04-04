@@ -1,5 +1,4 @@
-var btn_seta = document.getElementById("seta_function")
-
-btn_seta  () => {
-    
-}
+function showDiv() {
+    var minhaDiv = document.getElementById("minhaDiv");
+    minhaDiv.style.display = "block";
+  }

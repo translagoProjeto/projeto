@@ -3,13 +3,26 @@
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao_conteudo_titulo">Cidades</h1>
             <ul style="list-style-type:disc">
-                <li type="button" id="seta_function" class="seta">
+                <li class="seta" onclick="showDiv()">
                     <a class="apresentacao__conteudo__sugestoes">Linha 3001- Lagoinha de Fora / Santos Dumont (atende Ovídeo Guerra)</a>
                 </li>
             </ul>
+            <div id="minhaDiv" style="display:none;" class="container">
+                <div class="box">
+
+                    <ul>
+                        <li>10:30</li>
+                        <li>13:00</li>
+                        <li>15:00</li>
+                        <li>17:00</li>
+                    </ul>
+
+                </div>
+            
+            </div>
                     
         </section>
         <img src="/img/onibus.jpg" alt="Ônibus">
     </main>
 
-    <script src="/scripts/cidade.js"></script>
+    <script defer src="/scripts/cidade.js"></script>

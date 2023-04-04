@@ -5,3 +5,29 @@
 .seta:hover {
     cursor: pointer;
 }
+
+/*//CONTAINER//*/
+.container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: 150;
+    border-radius: 10px;
+    background-color: #eeeded;
+  }
+  
+  
+  .box {
+    background-color: #eeeded;
+    padding: 20px;
+  }
+
+  .container .box li {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 75px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
