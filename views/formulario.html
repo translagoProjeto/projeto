@@ -52,7 +52,7 @@
                 <div class="inputBox">
 
                     <label for="telefone" class="labelInput">Telefone</label><br><br>
-                    <input type="tel" name="telefone" id="telefone" class="inputUser" placeholder="(xx) xxxxx-xxxx" maxlength="15" onkeyup="handlePhone(event)" required>
+                    <input type="input" name="telefone" id="telefone" onkeydown="phoneMaskBrazil()" class="inputUser" placeholder="(xx) xxxxx-xxxx" maxlength="15" required>
                 </div><br><br>
 
                 
@@ -102,4 +102,19 @@
         </form>
  </div>
 
- <script src="/scripts/telefone_form.js"></script>
+ <script>
+    //MASCARA DO INPUT DO TELEFONE//
+    function phoneMaskBrazil() {
+  var key = window.event.key;
+  var element = window.event.target;
+  var isAllowed = /\d|Backspace|Tab/;
+  if(!isAllowed.test(key)) window.event.preventDefault();
+  
+  var inputValue = element.value;
+  inputValue = inputValue.replace(/\D/g,'');
+  inputValue = inputValue.replace(/(^\d{2})(\d)/,'($1) $2');
+  inputValue = inputValue.replace(/(\d{4,5})(\d{4}$)/,'$1-$2');
+  
+  element.value = inputValue;
+}
+ </script>

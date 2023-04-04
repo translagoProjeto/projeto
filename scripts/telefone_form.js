@@ -1,16 +1,13 @@
-const handlePhone = (event) => {
-    let input = event.target
-    input.value = phoneMask(input.value)
-  }
+function phoneMaskBrazil() {
+  var key = window.event.key;
+  var element = window.event.target;
+  var isAllowed = /\d|Backspace|Tab/;
+  if(!isAllowed.test(key)) window.event.preventDefault();
   
-  const phoneMask = (value) => {
-    if (!value) return ""
-    value = value.replace(/\D/g,'')
-    value = value.replace(/(\d{2})(\d)/,"($1) $2")
-    value = value.replace(/(\d)(\d{4})$/,"$1-$2")
-    return value
-  }
-
-
-  //NAO FUNCIONA AINDA 
-  //EM DEV :P
+  var inputValue = element.value;
+  inputValue = inputValue.replace(/\D/g,'');
+  inputValue = inputValue.replace(/(^\d{2})(\d)/,'($1) $2');
+  inputValue = inputValue.replace(/(\d{4,5})(\d{4}$)/,'$1-$2');
+  
+  element.value = inputValue;
+}

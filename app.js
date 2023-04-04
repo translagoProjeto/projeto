@@ -40,6 +40,8 @@ Handlebars.registerHelper('ifeq', function (a, b, options) {
     return options.inverse(this);
 });
 
+
+//Servidor
 app.listen(3000, () => {
     console.log("Servidor Esta Aberto!")
 });
