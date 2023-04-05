@@ -4,10 +4,22 @@
         <h1 class="apresentacao_conteudo_titulo">Cidades</h1>
 
         <ul style="list-style-type:disc">
-            <li>
+            <li class="seta" onclick="toggleDiv()">
 
                 <a class="apresentacao__conteudo__sugestoes">Linha 3001- Lagoinha de Fora / Santos Dumont (atende Ovídeo
                     Guerra)</a>
+            </li>
+
+            <div id="minhaDiv" class="container">
+                <div class="box">
+                    <h3>Tarifa: R$ 5,60</h3>
+    
+                    <p id="dataAtual"></p>
+    
+                    <ul id="horarios">     
+                    </ul>
+                </div>
+            </div>
 
             <li class="icone">
 
@@ -92,22 +104,11 @@
 
         </ul>
 
-        <div id="minhaDiv" class="container">
-            <div class="box">
-                <h3>Tarifa: R$ 5,60</h3>
+        
 
-                <p id="dataAtual"></p>
-
-                <ul id="horarios">
-                    
-                        
-                </ul>
-
-            </div>
-
-        </div>
 
     </section>
+
     <img src="/img/onibus.jpg" alt="Ônibus">
 </main>
 
