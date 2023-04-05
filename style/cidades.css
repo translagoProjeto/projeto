@@ -59,3 +59,22 @@
   }
 
 
+/*Mudei cidades */
+
+
+  .apresentacao__conteudo__sugestoes{
+    font-size: 1em;
+  }
+  
+  .icone::before { 
+    content: "";
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+  }
