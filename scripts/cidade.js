@@ -11,18 +11,28 @@ var diasDaSemana = {
 
 
 //ANIMAÇÃO
-function toggleDiv() {
-    var minhaDiv = document.getElementById("minhaDiv");
-    if (minhaDiv.classList.contains("mostrar")) {
-      minhaDiv.classList.remove("mostrar");
-      minhaDiv.style.display = "none"
-    } else {
-      minhaDiv.classList.add("mostrar");
-      minhaDiv.style.display = "block"
-        minhaDiv.scrollIntoView({ behavior: 'smooth'})
-    }
-  }
+function toggleDiv(id) {
+  var minhaDiv = document.getElementById(id);
   
+  if (minhaDiv.classList.contains("mostrar")) {
+    minhaDiv.classList.remove("mostrar");
+    minhaDiv.style.display = "none";
+  } else {
+    minhaDiv.classList.add("mostrar");
+    minhaDiv.style.display = "block";
+    minhaDiv.scrollIntoView({ behavior: 'smooth'});
+  }
+}
+
+document.getElementById("botao1").addEventListener("click", function() {
+  toggleDiv("minhaDiv1");
+});
+
+document.getElementById("botao2").addEventListener("click", function() {
+  toggleDiv("minhaDiv2");
+});
+
+
 //DIA 
 
 var data = new Date();
