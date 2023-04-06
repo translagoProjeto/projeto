@@ -15,8 +15,10 @@ function toggleDiv() {
     var minhaDiv = document.getElementById("minhaDiv");
     if (minhaDiv.classList.contains("mostrar")) {
       minhaDiv.classList.remove("mostrar");
+      minhaDiv.style.display = "none"
     } else {
       minhaDiv.classList.add("mostrar");
+      minhaDiv.style.display = "block"
         minhaDiv.scrollIntoView({ behavior: 'smooth'})
     }
   }
